@@ -15,7 +15,6 @@
         ~Logger();
 
         void EngineLog(const string& message);
-      //  void RiskLog(const string& message);
         void TradeLog(const string& message);
 
     };

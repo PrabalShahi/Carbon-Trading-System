@@ -18,12 +18,11 @@ using namespace std;
 class Engine{
 
     Logger logger;
-   void LoadOrderBooks();
+    void LoadOrderBooks();
     void LoadNormalizer();
     void LoadSpreadCalculator();
     void LoadArbitrageDetector();
     void LoadRiskManager();
-  //  void Execution_Engine();
 
     vector<MarketTick> pxil;
     vector<MarketTick> cbl;

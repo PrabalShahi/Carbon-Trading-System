@@ -163,9 +163,9 @@ void Engine::LoadRiskManager()
         if (RiskResult risk = riskManager.evaluate(spreads[i]); risk.Approved)
         {
             // Execute trade
-                execution.push_back(
-                    exec.execute(
-                        spreads[i]));
+            execution.push_back(
+            exec.execute(
+                spreads[i]));
 
             logger.TradeLog("Trade has been Executed");
         }

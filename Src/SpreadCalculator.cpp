@@ -1,7 +1,5 @@
 #include "SpreadCalculator.h"
-
 #include <iostream>
-
 #include "NormalizedTick.h"
 #include "SpreadTick.h"
 

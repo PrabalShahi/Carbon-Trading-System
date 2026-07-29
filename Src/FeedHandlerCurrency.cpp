@@ -33,6 +33,7 @@ vector<string> FeedHandlerCurrency::tokeniseCurrency(string Line, char separator
         start = end + 1;
 
     } while (end > 0);
+
     return tokens;
 }
 
@@ -53,11 +54,11 @@ vector<CurrencyTick> FeedHandlerCurrency::readCurrencyCsv(string CsvFileName)
             entries.push_back(CU);
         }
 
-
     } else
     {
         cout<<"Could not open the File"<<"\n";
     }
+
     return entries;
 }
 
@@ -70,6 +71,7 @@ CurrencyTick FeedHandlerCurrency::StringsToCurr( vector<string> tokens)
     timestamps = stoi(tokens[0]);
 
     CurrencyTick CU{timestamps, tokens[1], tokens[2], rate};
+    
     return CU;
 
 }

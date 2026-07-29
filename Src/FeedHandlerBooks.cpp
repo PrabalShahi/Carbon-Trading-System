@@ -34,6 +34,7 @@ vector<string> FeedHandlerBooks::tokenise(string Line, char separator)
         start = end + 1;
 
     } while (end > 0);
+    
     return tokens;
 }
 
@@ -60,6 +61,7 @@ vector<MarketTick> FeedHandlerBooks::readCSV(string CsvFileName)
     {
         cout<<"Could not open the File"<<"\n";
     }
+
  return entries;
 }
 
@@ -76,6 +78,7 @@ vector<MarketTick> FeedHandlerBooks::readCSV(string CsvFileName)
     timestamps = stoi(tokens[0]);
 
     MarketTick MT{timestamps, tokens[1], bid, ask, volume, tokens[5]};
+
     return MT;
 
 }
