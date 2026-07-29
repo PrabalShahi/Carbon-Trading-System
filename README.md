@@ -59,6 +59,7 @@ Execution Engine
 ├── Include/
 ├── Src/
 ├── Data/
+├── Logs
 ├── Tests/
 ├── CMakeLists.txt
 ├── Final_Design.jpeg
