@@ -93,19 +93,19 @@ The current version is a functional prototype. Future versions will include:
 
 Version 2.0
 --------------------------
-Finite State Machine
-Ring Buffer
-Producer / Consumer
+Finite State Machine,
+ Ring Buffer,
+ Producer / Consumer
 
 Version 3.0
 --------------------------
-Data-Oriented Design
-Structure of Arrays
-SIMD
-Memory Pool
+Data-Oriented Design,
+ Structure of Arrays,
+ SIMD,
+ Memory Pool
 
 Version 4.0
 --------------------------
-NUMA
-Thread Affinity
-CUDA
+NUMA,
+ Thread Affinity,
+ CUDA
