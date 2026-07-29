@@ -1,3 +1,5 @@
+<img width="10238" height="2976" alt="Final_Design" src="https://github.com/user-attachments/assets/34811290-af51-410c-b7a9-e42ba39292a7" />
+
 # Carbon Trading System
 
 A modular **Modern C++ trading system simulator** for carbon market trading. The project processes historical market data, detects arbitrage opportunities, performs risk validation, executes simulated trades, and logs trading activity. It is designed as a foundation for a high-performance trading engine.
