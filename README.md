@@ -16,7 +16,7 @@ A modular **C++ trading system simulator** for carbon market trading. The projec
 - Market data feed normalization
 - Currency normalization
 - Spread calculation
-- Arbitrage detection
+- Arbitrage detection(cross-exchange)
 - Risk management
 - Simulated trade execution
 - Logging
@@ -113,4 +113,4 @@ Version 4.0
 --------------------------
 NUMA,
  Thread Affinity,
- CUDA
+ CUDA(Monte Carlo risk simulation)
