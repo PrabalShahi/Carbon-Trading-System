@@ -9,10 +9,10 @@
 using namespace std;
 
 
-Engine::Engine()
+TradeX::TradeX()
 {}
 
-void Engine::Init()
+void TradeX::Init()
 {
 
  LoadOrderBooks();
@@ -25,7 +25,7 @@ void Engine::Init()
 
 }
 
-void Engine::LoadOrderBooks()
+void TradeX::LoadOrderBooks()
 {
     cbl = FeedHandlerBooks::readCSV("Data/cbl_market_data.csv");
     pxil =  FeedHandlerBooks::readCSV("Data/pxil_market_data.csv");
@@ -36,7 +36,7 @@ void Engine::LoadOrderBooks()
 
 }
 
-void Engine::LoadNormalizer()
+void TradeX::LoadNormalizer()
 {
     NormalizedCbl.clear();
     NormalizedPxil.clear();
@@ -93,7 +93,7 @@ void Engine::LoadNormalizer()
     }
 }
 
-void Engine::LoadSpreadCalculator()
+void TradeX::LoadSpreadCalculator()
 {
     spreads.clear();
     spreads.reserve(NormalizedCbl.size());
@@ -120,7 +120,7 @@ void Engine::LoadSpreadCalculator()
     logger.EngineLog("Spread Calculated");
 }
 
-void Engine::LoadArbitrageDetector()
+void TradeX::LoadArbitrageDetector()
 {
 
     arbitrage.clear();
@@ -153,7 +153,7 @@ void Engine::LoadArbitrageDetector()
 
 }
 
-void Engine::LoadRiskManager()
+void TradeX::LoadRiskManager()
 {
 
     for (size_t i = 0; i < spreads.size(); ++i)
@@ -163,9 +163,9 @@ void Engine::LoadRiskManager()
         if (RiskResult risk = riskManager.evaluate(spreads[i]); risk.Approved)
         {
             // Execute trade
-            execution.push_back(
-            exec.execute(
-                spreads[i]));
+                execution.push_back(
+                    exec.execute(
+                        spreads[i]));
 
             logger.TradeLog("Trade has been Executed");
         }
