@@ -10,7 +10,7 @@ add_executable(C___Arbitrage_State_Machine
         Src/FeedHandlerBooks.cpp
         src/FeedHandlerCurrency.cpp
         Src/MarketTick.cpp
-        src/CurrencyTick.cpp
+        Src/CurrencyTick.cpp
         Src/Normalizer.cpp
         Src/SpreadCalculator.cpp
         Src/Logger.cpp
