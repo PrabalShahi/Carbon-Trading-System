@@ -2,7 +2,7 @@
 #include "NormalizedTick.h"
 #include "SpreadTick.h"
 
-using namespace std;
+using namespace std; // Using this for the time being
 
 class SpreadCalculator
 {
