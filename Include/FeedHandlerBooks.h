@@ -4,7 +4,7 @@
 #include<fstream>
 #include "MarketTick.h"
 
-using namespace std;
+using namespace std; // Using this for the time being
 
 class FeedHandlerBooks
 {
