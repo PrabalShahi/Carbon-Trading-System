@@ -1,6 +1,6 @@
 #include "CurrencyTick.h"
 
-using namespace std;
+using namespace std; // Using this for the time being
 
 CurrencyTick::CurrencyTick(uint64_t _timestamps,
            string _baseCurrency,
