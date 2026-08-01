@@ -6,7 +6,7 @@ A modular **C++ trading system simulator** for carbon market trading. The projec
 
 ## Repository
 
-**GitHub:** https://github.com/nitro-png/Cplus__Trading_System_Sim
+**GitHub:** https://github.com/PrabalShahi/Carbon-Trading-System
 
 ---
 
