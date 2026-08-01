@@ -1,6 +1,6 @@
 #include "MarketTick.h"
 
-using namespace std;
+using namespace std; // Using this for the time being
 
 MarketTick::MarketTick(uint64_t _timestamps,
              string _exchange,
