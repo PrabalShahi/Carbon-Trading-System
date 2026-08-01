@@ -1,7 +1,7 @@
 #pragma once
 #include<string>
 
-using namespace std;
+using namespace std; // Using this for the time being
 
 
 class CurrencyTick{
