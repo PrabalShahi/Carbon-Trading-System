@@ -14,6 +14,6 @@ private:
 public:
     FeedHandlerCurrency();
     static vector<CurrencyTick> readCurrencyCsv(string CsvFileName);
-    static  CurrencyTick StringsToCurr( vector<string> tokens);
+    static  CurrencyTick StringsToCurr(const vector<string>& tokens);
 
 };
