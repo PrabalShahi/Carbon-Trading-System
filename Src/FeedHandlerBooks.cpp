@@ -65,7 +65,7 @@ vector<MarketTick> FeedHandlerBooks::readCSV(string CsvFileName)
  return entries;
 }
 
- MarketTick FeedHandlerBooks::StringsToMT(vector<string> tokens)
+ MarketTick FeedHandlerBooks::StringsToMT(const vector<string>& tokens)
 {
     double ask;
     double bid;
