@@ -62,7 +62,7 @@ vector<CurrencyTick> FeedHandlerCurrency::readCurrencyCsv(string CsvFileName)
     return entries;
 }
 
-CurrencyTick FeedHandlerCurrency::StringsToCurr( vector<string> tokens)
+CurrencyTick FeedHandlerCurrency::StringsToCurr(const vector<string>& tokens)
 {
     double rate;
     uint64_t timestamps;
