@@ -113,4 +113,4 @@ Version 4.0
 --------------------------
 NUMA,
  Thread Affinity,
- CUDA(Monte Carlo risk simulation)
+ CUDA
