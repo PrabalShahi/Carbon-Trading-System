@@ -1,6 +1,7 @@
 # Carbon Trading System
 
 A modular **C++ trading system simulator** for carbon market trading. The project processes simulated market data, detects arbitrage opportunities, performs risk validation, executes simulated trades, and logs trading activity.
+This project is under active development. New features and architectural improvements are being added as I continue learning about low-latency trading systems.
 
 ---
 
