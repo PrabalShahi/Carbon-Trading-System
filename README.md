@@ -127,4 +127,4 @@ Carbon HFT is real — but on CME/ICE futures (GEO, EUA), not this spot cross-ex
 CCTS bans short selling (Phase 1), killing one leg of the arbitrage domestically.
 Cross-border INR/USD flows carry FEMA/RBI constraints not addressed here.
 
-In short: this is trading infrastructure — feed handling, normalization, spread calculation, and low-latency execution mechanics — built and tested against a realistic cross-market scenario, not a claim of a live, tradeable strategy. The skills demonstrated here transfer directly to markets, including parts of the carbon space, where electronic, low-latency trading is already real.
+In short: this is trading infrastructure — feed handling, normalization, spread calculation, and low-latency execution mechanics — built and tested against a realistic cross-market scenario, not a claim of a live, tradeable strategy. The skills demonstrated here transfer directly to markets, including parts of the carbon space, where electronic, low-latency trading is real.
