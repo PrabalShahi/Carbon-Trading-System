@@ -115,3 +115,17 @@ Version 4.0
 NUMA,
  Thread Affinity,
  CUDA
+--------------------------
+A Note on Market Realism
+
+This project uses carbon credit market data — CBL (priced in USD) and PXIL (priced in INR) — as a realistic, domain-grounded test case for the trading engine. It's worth being explicit about what that does and doesn't mean.
+
+CBL's VCU and PXIL's CCC are not the same instrument. CBL trades Verified Carbon Units (VCUs) under the voluntary carbon market (e.g. Verra). PXIL trades Carbon Credit Certificates (CCCs) under India's Carbon Credit Trading Scheme (CCTS), a domestic compliance market for obligated industrial entities. Different registries, different verification standards, different regulatory regimes. A price gap between them isn't necessarily an inefficiency — it can just be two different products, correctly priced differently. The arbitrage detector here demonstrates the mechanism (comparing spreads across normalized, currency-converted feeds), not a claim that this specific cross-market trade is actually executable.
+
+Settlement, not latency, is the real bottleneck in carbon markets. A carbon credit trade settles through a registry transfer, which takes hours to days — not milliseconds. So the low-latency work in this project (ring buffers, memory pools, eventually CUDA) is a systems-engineering exercise in its own right, not something this particular market inherently demands. The skills transfer to markets where latency is the bottleneck (equities, FX, crypto); carbon just isn't one of them yet.
+
+CCTS does not currently permit short selling (Phase 1). That rules out one leg of a classic two-sided arbitrage on the domestic side as the scheme is presently designed.
+
+Cross-border capital movement between an INR-denominated Indian exchange and a USD-denominated global exchange carries real regulatory considerations (FEMA/RBI) that this project doesn't attempt to solve.
+
+In short: this is trading infrastructure — feed handling, normalization, spread calculation, and low-latency execution mechanics — built and tested against a realistic cross-market scenario, not a claim of a live, tradeable strategy.
