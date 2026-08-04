@@ -119,16 +119,12 @@ NUMA,
 --------------------------
 A Note on Market Realism
 
-This project uses carbon credit market data — CBL (priced in USD) and PXIL (priced in INR) — as a realistic, domain-grounded test case for the trading engine. It's worth being explicit about what that does and doesn't mean.
+CBL (USD, VCUs) and PXIL (INR, CCCs) are used here as a realistic test case for the trading engine — not a claim that this specific arbitrage is actually executable.
 
-CBL's VCU and PXIL's CCC are not the same instrument. CBL trades Verified Carbon Units (VCUs) under the voluntary carbon market (e.g. Verra). PXIL trades Carbon Credit Certificates (CCCs) under India's Carbon Credit Trading Scheme (CCTS), a domestic compliance market for obligated industrial entities. Different registries, different verification standards, different regulatory regimes. A price gap between them isn't necessarily an inefficiency — it can just be two different products, correctly priced differently. The arbitrage detector here demonstrates the mechanism (comparing spreads across normalized, currency-converted feeds), not a claim that this specific cross-market trade is actually executable.
-
-Registry transfer, not trade matching, is the real settlement bottleneck. Trade execution in carbon markets is already fast and electronic — Xpansiv's CBL platform offers instant matching and same-day settlement for spot trades, and carbon futures (below) clear same-day like any other futures contract. What's genuinely slow is moving the underlying serialized credit between different registries and verification frameworks — e.g. from Verra's system into India's CCTS, or vice versa — which involves verification steps that take hours to days, not milliseconds. So the low-latency work in this project (ring buffers, memory pools, eventually CUDA) is a systems-engineering exercise in its own right, and one that's directly transferable to where carbon trading is actually electronic today. It's the cross-registry fungibility assumption in this specific scenario that isn't real — not the idea of fast, electronic carbon trading in general.
-
-A form of carbon HFT already exists — just not in this scenario. CME Group lists Voluntary Carbon Emissions Offset futures (GEO, N-GEO, C-GEO) and EUA futures on CME Globex, with designated market makers and continuous electronic matching — the same infrastructure that supports algorithmic trading in any other futures product. ICE runs a parallel set of Nature-Based Solutions carbon futures and EUA contracts. Algorithmic and fast electronic trading genuinely happens on these markets today; whether it escalates to the colocation-style, ultra-low-latency HFT seen in equities depends mostly on liquidity, which is currently a fraction of majors like crude oil or equity index futures. A future version of this project aimed at market-making on carbon futures order-book data — rather than spot cross-exchange arbitrage — would sit on more solid market-structure ground.
-
-CCTS does not currently permit short selling (Phase 1). That rules out one leg of a classic two-sided arbitrage on the domestic side as the scheme is presently designed.
-
-Cross-border capital movement between an INR-denominated Indian exchange and a USD-denominated global exchange carries real regulatory considerations (FEMA/RBI) that this project doesn't attempt to solve.
+Different instruments: CBL and PXIL trade under different registries/standards; a price gap may reflect that, not inefficiency.
+Real bottleneck: Trade matching is already fast on both exchanges — it's cross-registry credit transfer (hours–days) that's slow, not execution.
+Carbon HFT is real — but on CME/ICE futures (GEO, EUA), not this spot cross-exchange setup.
+CCTS bans short selling (Phase 1), killing one leg of the arbitrage domestically.
+Cross-border INR/USD flows carry FEMA/RBI constraints not addressed here..
 
 In short: this is trading infrastructure — feed handling, normalization, spread calculation, and low-latency execution mechanics — built and tested against a realistic cross-market scenario, not a claim of a live, tradeable strategy. The skills demonstrated here transfer directly to markets, including parts of the carbon space, where electronic, low-latency trading is already real.
