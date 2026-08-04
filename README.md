@@ -115,6 +115,7 @@ Version 4.0
 NUMA,
  Thread Affinity,
  CUDA
+ 
 --------------------------
 A Note on Market Realism
 
