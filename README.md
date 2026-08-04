@@ -82,9 +82,9 @@ Execution Engine
 ## Build
 
 ```bash
-git clone https://github.com/nitro-png/Cplus__Trading_System_Sim.git
+git clone https://github.com/PrabalShahi/Carbon-Trading-System.git
 
-cd Cplus__Trading_System_Sim
+cd Carbon-Trading-System
 
 cmake -B build
 
