@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
-project(C___Arbitrage_State_Machine)
+project(CarbonTradingSystem)
 
 set(CMAKE_CXX_STANDARD 20)
 
 
-add_executable(C___Arbitrage_State_Machine
+add_executable(CarbonTradingSystem
         Src/Main.cpp
         Src/TradeX.cpp
         Src/FeedHandlerBooks.cpp
@@ -16,9 +16,10 @@ add_executable(C___Arbitrage_State_Machine
         Src/Logger.cpp
         Src/RiskManager.cpp
         Src/ExecutionEngine.cpp
+        Src/FSM.cpp
 )
 
- target_include_directories(C___Arbitrage_State_Machine PRIVATE Include)
+ target_include_directories(CarbonTradingSystem PRIVATE Include)
 
 #find_package(Catch2 3 REQUIRED)
 #add_executable(run_project_tests
