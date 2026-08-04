@@ -125,6 +125,6 @@ Different instruments: CBL and PXIL trade under different registries/standards; 
 Real bottleneck: Trade matching is already fast on both exchanges — it's cross-registry credit transfer (hours–days) that's slow, not execution.
 Carbon HFT is real — but on CME/ICE futures (GEO, EUA), not this spot cross-exchange setup.
 CCTS bans short selling (Phase 1), killing one leg of the arbitrage domestically.
-Cross-border INR/USD flows carry FEMA/RBI constraints not addressed here..
+Cross-border INR/USD flows carry FEMA/RBI constraints not addressed here.
 
 In short: this is trading infrastructure — feed handling, normalization, spread calculation, and low-latency execution mechanics — built and tested against a realistic cross-market scenario, not a claim of a live, tradeable strategy. The skills demonstrated here transfer directly to markets, including parts of the carbon space, where electronic, low-latency trading is already real.
