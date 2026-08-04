@@ -17,7 +17,7 @@ It is currently under active development. New features and architectural improve
 - Market data feed normalization
 - Currency normalization
 - Spread calculation
-- Arbitrage detection(cross-exchange)
+- Arbitrage detection(cross-exchange comparison)
 - Risk management
 - Simulated trade execution
 - Logging
