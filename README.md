@@ -63,7 +63,6 @@ Execution Engine
 ├── Logs/
 ├── Tests/
 ├── CMakeLists.txt
-├── Final_Design.jpeg
 └── README.md
 ```
 
